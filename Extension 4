@@ -44,3 +44,27 @@ if temperatures:
     print(f"Number of people with fever (>37.5°C): {fever_count}")
 else:
     print("No valid temperature data found.")
+
+#terminal (testing result)
+'''
+Sample 'temperatures.csv' has been created automatically.
+
+==============================
+Analysis Report for 'temperatures.csv'
+==============================
+Valid records found: 7
+Minimum temperature: 36.2 °C
+Maximum temperature: 38.5 °C
+Average temperature: 37.3 °C
+Number of people with fever (>37.5°C): 3
+Sample 'temperatures.csv' has been created automatically.
+
+==============================
+Analysis Report for 'temperatures.csv'
+==============================
+Valid records found: 7
+Minimum temperature: 36.2 °C
+Maximum temperature: 38.5 °C
+Average temperature: 37.3 °C
+Number of people with fever (>37.5°C): 3
+'''
