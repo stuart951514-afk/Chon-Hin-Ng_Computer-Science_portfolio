@@ -1,0 +1,7 @@
+prime = int(input("input a number: ")) #Ask user input a number
+for i in range(2, int(prime ** (1/2)) + 1): #Make a for loop and set the range to calculate
+  if prime % i == 0: #Check whether the number is prime
+    print("Not a prime number") #Print the message
+    break
+else:
+  print("Prime number") #Print the message
