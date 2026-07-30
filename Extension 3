@@ -1,0 +1,26 @@
+from IPython.display import display, HTML
+
+# Define the HTML structure with embedded CSS styling
+html_code = """
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Simple Website</title>
+    <style>
+        body { font-family: Arial; text-align: center; padding: 50px; background: #f0f8ff; }
+        h1 { color: #2e8b57; }
+        .box { background: #ffffe0; padding: 20px; border-radius: 10px; display: inline-block; }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Site!</h1>
+    <div class="box">
+        <p>This is a HTML+CSS page rendered directly in Colab.</p>
+        <p>No external server or installation needed!</p>
+    </div>
+</body>
+</html>
+"""
+
+# Render the HTML code in the notebook output cell
+display(HTML(html_code))
