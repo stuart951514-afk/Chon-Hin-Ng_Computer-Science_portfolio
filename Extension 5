@@ -17,3 +17,13 @@ search_item = input("Enter an element to search for: ")
 # Call the function and display the boolean result
 result = element_search(example_list, search_item)
 print(f"Is '{search_item}' in the list? {result}")
+
+#terminal (testing result)
+'''
+Current list: ['Write', 'a', 'function', 'that', 'takes', 'a', 'list']
+Enter an element to search for: that
+Is 'that' in the list? True
+Current list: ['Write', 'a', 'function', 'that', 'takes', 'a', 'list']
+Enter an element to search for: a
+Is 'a' in the list? True
+'''
