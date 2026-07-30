@@ -1,0 +1,18 @@
+import os
+from google.colab import files
+
+# Step 1: Ask the user to upload a CSV file
+print("Please upload your CSV file:")
+uploaded = files.upload()                     # Opens file picker in Colab
+csv_filename = list(uploaded.keys())[0]       # Get the name of the uploaded file
+
+# Step 2: Get the file size in bytes and print it
+size = os.path.getsize(csv_filename)
+print(f"Size of '{csv_filename}': {size} bytes")
+
+# Step 3: Write a short test message to a new text file
+content = "This is a test message.\nHello from Colab!"
+txt_filename = "output.txt"
+with open(txt_filename, 'w', encoding='utf-8') as f:
+    f.write(content)
+print(f"Content written to '{txt_filename}'")
