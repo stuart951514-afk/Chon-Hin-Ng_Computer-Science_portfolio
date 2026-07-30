@@ -16,3 +16,13 @@ txt_filename = "output.txt"
 with open(txt_filename, 'w', encoding='utf-8') as f:
     f.write(content)
 print(f"Content written to '{txt_filename}'")
+
+#terminal (testing result)
+'''
+Please upload your CSV file:
+J-CompSci_Chon Hin Ng Louis_IC.docx
+J-CompSci_Chon Hin Ng Louis_IC.docx(application/vnd.openxmlformats-officedocument.wordprocessingml.document) - 425162 bytes, last modified: 29/07/2026 - 100% done
+Saving J-CompSci_Chon Hin Ng Louis_IC.docx to J-CompSci_Chon Hin Ng Louis_IC.docx
+Size of 'J-CompSci_Chon Hin Ng Louis_IC.docx': 425162 bytes
+Content written to 'output.txt'
+'''
