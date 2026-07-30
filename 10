@@ -1,0 +1,7 @@
+N = int(input("input a number: ")) #Ask user input a number
+#Set variables
+start_num = 1
+end_num = 1
+for i in range(N): #Make a for loop for calculate and print the results
+  print(start_num) #print each result
+  start_num, end_num = end_num, start_num + end_num #calculate next number
