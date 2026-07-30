@@ -19,3 +19,11 @@ add(3,6)
 subtract(6,3)
 multiply(7,4)
 divide(10,2)
+
+#terminal (testing result)
+'''
+9
+3
+28
+5.0
+'''
