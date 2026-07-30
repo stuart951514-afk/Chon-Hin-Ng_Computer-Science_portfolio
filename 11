@@ -5,3 +5,9 @@ for i in range(2, int(prime ** (1/2)) + 1): #Make a for loop and set the range t
     break
 else:
   print("Prime number") #Print the message
+
+#terminal (testing result)
+'''
+input a number: 477
+Not a prime number
+'''
