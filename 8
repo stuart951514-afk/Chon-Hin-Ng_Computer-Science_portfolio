@@ -1,0 +1,20 @@
+#make a menu for mathematical
+print("Simple Calculator")
+print("add")
+print("subtract")
+print("multiply")
+print("divide")
+#user input the chooise
+mathematical_operation = input("input a mathematical operation: ")
+#input two number for calculate
+num_1 = int(input("input a number: "))
+num_2 = int(input("input another number: "))
+#check which mathematical it need to do
+if mathematical_operation == "add":
+  print(num_1 + num_2)
+elif mathematical_operation == "subtract":
+  print(num_1 - num_2)
+elif mathematical_operation == "multiply":
+  print(num_1 * num_2)
+elif mathematical_operation == "divide":
+  print(num_1 / num_2)
