@@ -1,0 +1,21 @@
+#function for add
+def add(num_a, num_b):
+  print(num_a + num_b)
+
+#function for subtract
+def subtract(num_a, num_b):
+  print(num_a - num_b)
+
+#function for multiply
+def multiply(num_a, num_b):
+  print(num_a * num_b)
+
+#function for divide
+def divide(num_a, num_b):
+  print(num_a / num_b)
+
+#put some number for calculate
+add(3,6)
+subtract(6,3)
+multiply(7,4)
+divide(10,2)
