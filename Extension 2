@@ -1,0 +1,32 @@
+import sqlite3
+
+#Create (or connect to) a database file
+db_name = "names.db"
+conn = sqlite3.connect(db_name)
+c = conn.cursor()
+
+#Create a table 'people' with a unique name column
+c.execute('''CREATE TABLE IF NOT EXISTS people
+             (id INTEGER PRIMARY KEY, name TEXT UNIQUE)''')
+
+#Insert a few sample names (ignore duplicates)
+sample_names = ["Alice", "Bob", "Charlie", "Diana", "Eve"]
+for name in sample_names:
+    c.execute("INSERT OR IGNORE INTO people (name) VALUES (?)", (name,))
+conn.commit()
+conn.close()
+print(f"Database '{db_name}' created with sample names.")
+
+#Ask the user for a name to search
+search = input("Enter a name to check: ")
+conn = sqlite3.connect(db_name)
+c = conn.cursor()
+c.execute("SELECT 1 FROM people WHERE name = ?", (search,))
+found = c.fetchone() is not None
+conn.close()
+
+#Print whether the name exists
+if found:
+    print(f"'{search}' is in the database.")
+else:
+    print(f"'{search}' is NOT in the database.")
