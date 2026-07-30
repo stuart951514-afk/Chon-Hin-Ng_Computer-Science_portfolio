@@ -1,0 +1,19 @@
+# Define the search function
+def element_search(lst, element):
+    """
+    Returns True if element is found in the list, otherwise False.
+    """
+    return element in lst
+
+# Example list given in the assignment
+example_list = ["Write", "a", "function", "that", "takes", "a", "list"]
+
+# Show the current list to the user
+print(f"Current list: {example_list}")
+
+# Ask for user input
+search_item = input("Enter an element to search for: ")
+
+# Call the function and display the boolean result
+result = element_search(example_list, search_item)
+print(f"Is '{search_item}' in the list? {result}")
