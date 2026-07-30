@@ -1,0 +1,46 @@
+import csv
+
+#Create a sample CSV file with temperature data (no upload needed)
+sample_data = """Name,Temperature
+Alice,36.8
+Bob,37.2
+Charlie,38.1
+Diana,36.5
+Eve,37.8
+Frank,36.2
+Grace,38.5
+"""
+with open('temperatures.csv', 'w', encoding='utf-8') as f:
+    f.write(sample_data)
+print("Sample 'temperatures.csv' has been created automatically.")
+
+#Read the CSV file and extract valid temperature values
+filename = 'temperatures.csv'
+temperatures = []
+with open(filename, 'r', encoding='utf-8') as f:
+    reader = csv.DictReader(f)               # Assumes header row with 'Name' and 'Temperature'
+    for row in reader:
+        try:
+            temp = float(row['Temperature']) # Convert to float
+            temperatures.append(temp)
+        except ValueError:
+            print(f"Skipping invalid temperature: {row['Temperature']}")
+
+#Compute statistics if we have any data
+if temperatures:
+    min_temp = min(temperatures)
+    max_temp = max(temperatures)
+    avg_temp = sum(temperatures) / len(temperatures)
+    fever_count = sum(1 for t in temperatures if t > 37.5)   # Count fevers (>37.5°C)
+
+    # Print the analysis report
+    print("\n" + "="*30)
+    print(f"Analysis Report for '{filename}'")
+    print("="*30)
+    print(f"Valid records found: {len(temperatures)}")
+    print(f"Minimum temperature: {min_temp:.1f} °C")
+    print(f"Maximum temperature: {max_temp:.1f} °C")
+    print(f"Average temperature: {avg_temp:.1f} °C")
+    print(f"Number of people with fever (>37.5°C): {fever_count}")
+else:
+    print("No valid temperature data found.")
