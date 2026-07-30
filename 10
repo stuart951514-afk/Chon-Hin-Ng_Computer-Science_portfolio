@@ -5,3 +5,14 @@ end_num = 1
 for i in range(N): #Make a for loop for calculate and print the results
   print(start_num) #print each result
   start_num, end_num = end_num, start_num + end_num #calculate next number
+
+#terminal (testing result)
+'''
+input a number: 6
+1
+1
+2
+3
+5
+8
+'''
