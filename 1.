@@ -1,3 +1,0 @@
-a = 5 #set a number
-b = 2 #set another number
-print(a + b) #add them
