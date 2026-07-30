@@ -24,3 +24,16 @@ html_code = """
 
 # Render the HTML code in the notebook output cell
 display(HTML(html_code))
+
+#terminal (testing result)
+'''
+Welcome to My Site!
+This is a HTML+CSS page rendered directly in Colab.
+
+No external server or installation needed!
+
+Welcome to My Site!
+This is a HTML+CSS page rendered directly in Colab.
+
+No external server or installation needed!
+'''
